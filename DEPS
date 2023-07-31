@@ -369,10 +369,10 @@ deps = {
       'dep_type': 'cipd',
   },
 
-  'third_party/catapult': {
-    'url': '{chromium_git}/catapult.git@{catapult_revision}',
-    'condition': 'not build_with_chromium',
-  },
+  #'third_party/catapult': {
+  #  'url': '{chromium_git}/catapult.git@{catapult_revision}',
+  #  'condition': 'not build_with_chromium',
+  #},
 
   # Cherry is a dEQP/VK-GL-CTS management GUI written in Go. We use it for viewing test results.
   'third_party/cherry': {
@@ -612,10 +612,10 @@ deps = {
     'condition': 'checkout_android and not build_with_chromium',
   },
 
-  'third_party/SwiftShader': {
-    'url': '{swiftshader_git}/SwiftShader@9fbca2df22a8e71e3116a576e26cf9b3d7915c08',
-    'condition': 'not build_with_chromium',
-  },
+  #'third_party/SwiftShader': {
+  #  'url': '{swiftshader_git}/SwiftShader@9fbca2df22a8e71e3116a576e26cf9b3d7915c08',
+  #  'condition': 'not build_with_chromium',
+  #},
 
   'third_party/turbine': {
       'packages': [
@@ -628,9 +628,9 @@ deps = {
       'dep_type': 'cipd',
   },
 
-  'third_party/VK-GL-CTS/src': {
-    'url': '{chromium_git}/external/github.com/KhronosGroup/VK-GL-CTS@{vk_gl_cts_revision}',
-  },
+  #'third_party/VK-GL-CTS/src': {
+  #  'url': '{chromium_git}/external/github.com/KhronosGroup/VK-GL-CTS@{vk_gl_cts_revision}',
+  #},
 
   'third_party/vulkan-deps': {
     'url': '{chromium_git}/vulkan-deps@6f1c3384ecb605efb9bc22b85d3dca0d0f552020',
