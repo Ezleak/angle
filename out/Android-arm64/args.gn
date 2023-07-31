@@ -27,8 +27,8 @@ angle_enable_gl_desktop_frontend = true
 angle_enable_swiftshader = false
 
 # Disable all shader translator targets except desktop GL (for Vulkan)
-angle_enable_essl = true
-angle_enable_glsl = true
+angle_enable_essl = false
+angle_enable_glsl = false
 angle_enable_hlsl = false
 
 #angle_enable_commit_id = false
@@ -36,8 +36,8 @@ angle_enable_hlsl = false
 # Disable histogram/protobuf support
 angle_has_histograms = false
 
-# Disable _LIBCPP_ABI_UNSTABLE, since it breaks std::string
-libcxx_abi_unstable = false
+# Use system lib(std)c++, since the Chromium library breaks std::string
+use_custom_libcxx = false
 
 # rapidJSON is used for ANGLE's frame capture (among other things), which is unnecessary for AOSP builds.
 angle_has_rapidjson = false
