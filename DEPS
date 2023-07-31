@@ -369,10 +369,10 @@ deps = {
       'dep_type': 'cipd',
   },
 
-  #'third_party/catapult': {
-  #  'url': '{chromium_git}/catapult.git@{catapult_revision}',
-  #  'condition': 'not build_with_chromium',
-  #},
+  'third_party/catapult': {
+    'url': '{chromium_git}/catapult.git@{catapult_revision}',
+    'condition': 'not build_with_chromium',
+  },
 
   # Cherry is a dEQP/VK-GL-CTS management GUI written in Go. We use it for viewing test results.
   'third_party/cherry': {
