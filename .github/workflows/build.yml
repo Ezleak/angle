@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ main_huge ]
   pull_request:
-    branches: [ main ]
+    branches: [ main_huge ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
   build:
     strategy:
       matrix:
-        arch: [ "arm", "arm64", "x86", "x64" ]
+        arch: [ "arm64" ]
       fail-fast: false
 
     name: "Build for Android ${{matrix.arch}}"
@@ -51,4 +51,4 @@ jobs:
         with:
           name: angle-libs-${{matrix.arch}}
           path: |
-            angle/out/Android-${{matrix.arch}}/lib*
+            angle/out/Android-${{matrix.arch}}/*
