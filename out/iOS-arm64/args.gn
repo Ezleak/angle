@@ -1,0 +1,39 @@
+target_os = "ios"
+is_component_build = false
+is_debug = false
+dcheck_always_on = false
+symbol_level = 0
+#angle_standalone = true
+angle_build_all = false
+
+# Build for 64-bit CPUs
+target_cpu = "arm64"
+
+# Disable all backends except Vulkan
+angle_enable_vulkan = false
+angle_enable_gl = false
+angle_enable_d3d9 = false
+angle_enable_d3d11 = false
+angle_enable_null = false
+angle_enable_metal = true
+
+angle_enable_gl_desktop_frontend = true
+
+# SwiftShader is loaded as the system Vulkan driver on Android, not compiled by ANGLE
+angle_enable_swiftshader = false
+
+# Disable all shader translator targets except desktop GL (for Vulkan)
+angle_enable_essl = true
+angle_enable_glsl = true
+angle_enable_hlsl = false
+
+#angle_enable_commit_id = false
+
+# Disable histogram/protobuf support
+angle_has_histograms = false
+
+# rapidJSON is used for ANGLE's frame capture (among other things), which is unnecessary for AOSP builds.
+angle_has_rapidjson = false
+
+# Disable codesigning
+ios_enable_code_signing = false
