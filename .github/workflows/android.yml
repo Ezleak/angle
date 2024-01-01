@@ -19,7 +19,7 @@ jobs:
   build:
     strategy:
       matrix:
-        arch: [ "arm64", "arm", "x64" ] # x86
+        arch: [ "arm64", "arm", "x64" , "x86" ] # x86
       fail-fast: false
 
     name: "Build for Android ${{matrix.arch}}"
